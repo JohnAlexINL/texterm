@@ -195,7 +195,7 @@ void editor_refresh_screen() {
     editor_status_bar(&strb);
     editor_message_bar(&strb);
 
-    char curpos[16];
+    char curpos[32];
     snprintf(curpos, sizeof(curpos), "\x1b[%d;%dH", editor.cy - editor.rowoff + 1, editor.rx - editor.coloff + 1);
 
     strb_append(&strb, curpos, strlen(curpos));
